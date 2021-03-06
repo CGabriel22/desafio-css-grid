@@ -1,0 +1,193 @@
+/* 
+////////////////////////////
+author: Carlos Gabriel Leite Barros
+////////////////////////////
+*/
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+:root {
+    --background-color: hsl(210, 46%, 95%);
+    --primary-color-pink: hsl(263, 55%, 52%);
+    --primary-color-gray: hsl(217, 19%, 35%);
+    --primary-color-dark: hsl(219, 29%, 14%);
+    --white-color: hsl(0, 0%, 100%);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: var(--background-color);
+}
+/* ------------ */
+
+/* estilos do container e gerais*/
+.container {
+    width: 928px;
+    height: 512px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "daniel daniel jonathan kira"
+    "jeanette patrick patrick kira"
+    ;
+    grid-gap: 32px;
+}
+
+.container > div {
+    padding: 16px;
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    box-shadow: 12px 10px 28px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.perfil {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 1.5px rgba(255, 255, 255, 0.25);
+}
+
+.white .perfil {
+    box-shadow: 0px 0px 0px 1.5px rgba(0, 0, 0, 0.25);
+}
+
+.top-container {
+    display: flex;
+    align-items: center;
+}
+
+.title-container {
+    margin-left: 16px;
+}
+
+h2 {
+    font-family: Barlow Semi Condensed;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.0015em;
+    color: var(--white-color);
+}
+
+.white h2 {
+    color: var(--primary-color-dark);
+}
+
+h3 {
+    font-family: Barlow Semi Condensed;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.0015em;
+    color: var(--white-color); 
+}
+
+.white h3 {
+    color: var(--primary-color-dark);
+}
+
+p {
+    font-family: Barlow Semi Condensed;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.0015em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.white p {
+    color:rgba(25, 33, 46, 0.5);
+}
+
+.verifield {
+    font-family: Barlow Semi Condensed;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.0015em;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.white .verifield {
+    color: rgba(25, 33, 46, 0.5);
+}
+
+/* estilos individuais */
+
+/* estilos de daniel */
+.daniel {
+    background-color: var(--primary-color-pink);
+    background-image: url(../img/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 84% 0;
+    grid-area: daniel;
+}
+
+.daniel .perfil {
+    background: url(../img/image-daniel.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+/* estilos de jonathan */
+.jonathan {
+    background-color: var(--primary-color-gray);
+    grid-area: jonathan;
+}
+
+.jonathan .perfil {
+    background: url(../img/image-jonathan.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+/* estilos de jeanette */
+.jeanette {
+    background-color: var(--white-color);
+    grid-area: jeanette;
+}
+
+.jeanette .perfil {
+    background: url(../img/image-jeanette.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+/* estilos de patrick */
+.patrick {
+    background-color: var(--primary-color-dark);
+    grid-area: patrick;
+}
+
+.patrick .perfil {
+    background: url(../img/image-patrick.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+/* estilos de kira */
+.kira {
+    background-color: var(--white-color);
+    grid-area: kira;
+}
+
+.kira .perfil {
+    background: url(../img/image-kira.jpg) no-repeat center center;
+    background-size: cover;
+}
