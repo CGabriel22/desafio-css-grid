@@ -26,12 +26,17 @@ html, body {
     position: absolute;
     background-color: var(--background-color);
 }
+
+body {
+    padding: 0 2%;
+}
 /* ------------ */
 
 /* estilos do container e gerais*/
 .container {
-    width: 928px;
-    height: 512px;
+    width: 100%;
+    max-width: 928px;
+    min-height: 512px;
     position: relative;
     top: 50%;
     left: 50%;
@@ -190,4 +195,41 @@ p {
 .kira .perfil {
     background: url(../img/image-kira.jpg) no-repeat center center;
     background-size: cover;
+}
+
+/* medias queries */
+
+@media only screen and (max-width: 948px) {
+    .container {
+        grid-gap: 16px;
+    }
+}
+
+@media only screen and (max-width: 832px) {
+    .container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+        "daniel daniel jonathan"
+        "kira kira kira"
+        "jeanette patrick patrick"
+        ;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 0.8fr 0.8fr 1fr 1.3fr;
+        grid-template-areas:
+        "daniel"
+        "jonathan"
+        "jeanette"
+        "patrick"
+        "kira"
+        ;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
 }
