@@ -214,6 +214,9 @@ p {
         "kira kira kira"
         "jeanette patrick patrick"
         ;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
     }
 }
 
